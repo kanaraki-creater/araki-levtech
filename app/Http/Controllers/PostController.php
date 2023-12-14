@@ -9,6 +9,11 @@ class PostController extends Controller
 {
     public function index(Post $post)
     {
-        return $post->get();
+        return view('posts/index')->with(['posts' => $post->get(1)]); 
+    }
+    
+    public function show(Post $post)
+    {
+        dd($post);
     }
 }
