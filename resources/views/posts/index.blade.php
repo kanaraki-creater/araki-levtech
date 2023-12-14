@@ -2,24 +2,22 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
+        <title>Blog</title>
         <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
-    <body class="antialiased">
-        <h1>Blog</h1>
+    <body>
+        <h1>Blog Name</h1>
         <div class='posts'>
-            @foreach($posts as $post)
+            @foreach ($posts as $post)
                 <div class='post'>
-                    <h2 class='titile'>{{ $post->title}}</h2>
-                    <p class='body'>{{ $post->body}}</p>
+                    <h2 class='title'>Title</h2>
+                    <p class='body'>This is a sample body.</p>
                 </div>
             @endforeach
         </div>
-        <div class='paginate'>{{ $posts->links()}}</div>
+        <div class='pagnate'>
+            {{ $posts->links() }}
+        </div>
     </body>
 </html>
