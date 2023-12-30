@@ -33,5 +33,7 @@
                 }
             }
         </script>
+        <div>{{ Auth::user()->name }}</div>
+        <a href="">{{ $post->category->name }}</a>
     </body>
 </html>
